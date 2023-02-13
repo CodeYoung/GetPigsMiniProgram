@@ -1,13 +1,39 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/animalDoctor/animalDoctor",
+    "pages/my/my"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTitleText": "收猪啦综合服务平台",
+    "navigationBarBackgroundColor": "#FF8C00",
+    "backgroundColor": "#FF8C00"
+  },
+  "tabBar": {
+    "selectedColor": "#FF8C00",
+    "color": "#ccc",
+    "list": [
+      {
+        "text": "首页",
+        "iconPath": "static/icon/home_gray.png",
+        "selectedIconPath": "static/icon/home.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "兽医",
+        "iconPath": "static/icon/medicine_gray.png",
+        "selectedIconPath": "static/icon/medicine.png",
+        "pagePath": "pages/animalDoctor/animalDoctor"
+      },
+      {
+        "text": "我的",
+        "iconPath": "static/icon/person_gray.png",
+        "selectedIconPath": "static/icon/person.png",
+        "pagePath": "pages/my/my"
+      }
+    ]
   },
   "usingComponents": {}
 }

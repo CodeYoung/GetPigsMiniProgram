@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "uni-app",
+  "navigationBarTitleText": "收猪啦综合服务平台",
+  "navigationBarTextStyle": "white",
   "usingComponents": {}
 }
