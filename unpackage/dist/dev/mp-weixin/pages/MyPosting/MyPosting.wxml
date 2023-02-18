@@ -1,0 +1,1 @@
+<view><image class="post" src="../../static/icon/fly_1.png"></image><view class="no">您还没有发布出售信息哦~</view><button class="gopost">去发布</button></view>

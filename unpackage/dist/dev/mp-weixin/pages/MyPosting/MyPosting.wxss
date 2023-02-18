@@ -1,0 +1,28 @@
+
+.post
+{
+	height: 180rpx;
+	width: 180rpx;
+	margin-left: 260rpx;
+	margin-top: 320rpx;
+}
+.no
+{
+	margin-left: 20%;
+	margin-top: 2%;
+	color: gray;
+}
+.gopost
+{
+	height: 70rpx;
+	width: 180rpx;
+	margin-right: 305rpx;
+	margin-top: 50rpx;
+	background-color:#EE7621;
+	color: white;
+	border-radius: 50rpx;
+	font-size:29rpx
+}
+
+
+
