@@ -1,0 +1,1 @@
+<view><image class="right" src="../../static/common/right.png"></image><view class="success">您已支付成功！</view><button class="look">查看订单</button><button class="return">返回首页</button></view>
