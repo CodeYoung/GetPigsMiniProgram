@@ -31,6 +31,9 @@
 	{
 		margin-left: 42%;
 		color: #D3D3D3;
+		margin-top:15rpx;
+		margin-left: 330rpx;
+		font-size: 26rpx;
 	}
 
 </style>
