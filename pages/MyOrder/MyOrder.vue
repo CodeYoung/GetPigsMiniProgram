@@ -30,6 +30,6 @@
 .Nothing
 {
 	margin-left: 42%;
-	color: gray;
+	color: #D3D3D3;
 }
 </style>

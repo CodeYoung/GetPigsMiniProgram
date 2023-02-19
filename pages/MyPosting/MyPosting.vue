@@ -32,7 +32,7 @@
 {
 	margin-left: 25%;
 	margin-top: 2%;
-	color: gray;
+	color: #D3D3D3;
 }
 .gopost
 {
