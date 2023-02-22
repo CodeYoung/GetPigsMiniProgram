@@ -116,6 +116,7 @@
 	.zhongwen {
 		position: fixed;
 		top: 360px;
+		top: 720rpx;
 		left: 174rpx;
 		color: gray;
 		font-size: 1px;
