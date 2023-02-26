@@ -164,7 +164,7 @@
 			}
 			.preserve{
 				background-color: #FF7F00;
-				margin-top: 100px;
+				margin-top: 98px;
 				border-radius: 60rpx;
 				border: #FF7F00;
 				height: 80rpx;
