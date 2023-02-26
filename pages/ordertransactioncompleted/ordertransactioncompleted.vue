@@ -1,19 +1,8 @@
 <template>
-	<view>
-		
-
-</view>
-
-	</view>
 </template>
 
 <script>
-	
 </script>
 
-
 <style>
-	
-	
-
 </style>
