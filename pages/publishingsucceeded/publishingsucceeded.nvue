@@ -1,27 +1,27 @@
 <template>
 	<view class="box1">
-		<view>.</view>
-		<view  class="box2">
-		<view>
-			<image src="../../static/icon/fly.png" class="ImgPicture"></image>
+		<view class="box2">
+			<view>
+				<image src="../../static/icon/fly.png" class="ImgPicture"></image>
+			</view>
+			<view class="WdApply">发布成功</view>
 		</view>
-		<view class="WdApply">发布成功</view>
-		</view>
-		
-		</view>
+	</view>
 </template>
 
+
 <script>
-	
+
 </script>
 
-<style>
-    .box1{
-		background:#C0C0C0 ;
-		height:623px;
-		
+<style lang="scss">
+	.box1 {
+		background: #C0C0C0;
+		height: 623px;
+
 	}
-	.box2{
+
+	.box2 {
 		border-radius: 10px;
 		margin: 200px;
 		margin-top: 200px;
@@ -30,21 +30,22 @@
 		height: 120px;
 		background: #FFFFFF;
 	}
-	.ImgPicture{
+
+	.ImgPicture {
 		height: 75rpx;
 		width: 65rpx;
-		
+
 		margin-top: 30px;
-		
-	margin-left: 75px;
-	margin-right: 100px;
-	
-		
+
+		margin-left: 75px;
+		margin-right: 100px;
+
+
 	}
-	
-    .WdApply{
+
+	.WdApply {
 		margin-top: 12px;
-			margin-left: 59px;
-			margin-right: 10px;
-		}
+		margin-left: 59px;
+		margin-right: 10px;
+	}
 </style>

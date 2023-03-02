@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<view class="nav">
+		<view class="nav" :class="{'nav':!isWhite,'nav_white':isWhite}">
 			<!-- 选项卡水平方向滑动，scroll-with-animation是滑动到下一个选项时，有一个延时效果 -->
 			<scroll-view class="tab-scroll" scroll-x="true" scroll-with-animation :scroll-left="scrollLeft">
 				<view class="tab-scroll_box">
@@ -10,9 +10,10 @@
 					</view>
 				</view>
 			</scroll-view>
+			<view class="line" :v-show="isWhite"></view>
 		</view>
 		<!-- 选项卡内容轮播滑动显示，current为当前第几个swiper子项 -->
-		<swiper @change="change" :current="isActive" class="swiper-content" :style="fullHeight">
+		<!-- <swiper @change="change" :current="isActive" v-show="!isWhite" class="swiper-content" :style="fullHeight">
 			<swiper-item class="swiperitem-content">
 				<scroll-view scroll-y style="height: 100%;">
 					<view class="nav_item" >
@@ -56,13 +57,14 @@
 				    </view>
 				</scroll-view>	
 			</swiper-item>
-		</swiper>
-	</view>
+		</swiper> -->
+	</view> 
 </template>
 <script>
 	export default {
 		name:"tabControl",
 		watch:{
+			
 			// swiper与上面选项卡联动
 			currentindex(newval){
 				this.isActive = newval;
@@ -78,32 +80,6 @@
 				isActive: 0,
 				index: 0,
 				currentindex:0,
-				// category:[
-				// 	{
-				// 		id:1,
-				// 		name:'选项卡一',
-				// 	},
-				// 	{
-				// 		id:2,
-				// 		name:'选项卡二',
-				// 	},
-				// 	{
-				// 		id:3,
-				// 		name:'选项卡三',
-				// 	},
-				// 	{
-				// 		id:4,
-				// 		name:'选项卡四',
-				// 	},
-				// 	{
-				// 		id:5,
-				// 		name:'选项卡五',
-				// 	},
-				// 	{
-				// 		id:6,
-				// 		name:'选项卡六',
-				// 	},
-				// ],
 				contentScrollW: 0, // 导航区宽度
 				scrollLeft: 0, // 横向滚动条位置
 				fullHeight:"",	
@@ -147,6 +123,7 @@
 				for (let i = 0; i < index - 1; i++) {
 					this.scrollLeft += this.category[i].width
 				};
+				this.$emit("ChangeTab",this.isActive);
 			},
 			// swiper滑动时，获取其索引，也就是第几个
 			change(e){
@@ -154,6 +131,7 @@
 				this.currentindex = current;
 				this.$emit("ChangeTab",this.currentindex);
 			},	
+			
 		}
 	}
 </script>
@@ -165,13 +143,13 @@
 	}
 	.content{
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		width: 100%;
 		flex: 1;
 		.nav{
 			border-top: 1rpx solid $uni-bg-color;
 			background-color: $uni-bg-color;	
-			position: fixed;
+			// position: fixed;
 			z-index: 99;
 			width: 100%;
 			align-items: center;
@@ -198,6 +176,44 @@
 						padding-top: 10px;
 					}
 				}
+			}
+		}
+		.nav_white{
+			border-top: 1rpx solid  $uni-color-selected;
+			background-color: $uni-color-selected;	
+			// position: fixed;
+			z-index: 99;
+			width: 750rpx;
+			align-items: center;
+			height: 100rpx;
+			.tab-scroll{
+				flex: 1;
+				overflow: hidden;
+				box-sizing: border-box;
+				padding-left: 160rpx;
+				padding-right: 30rpx;
+				.tab-scroll_box{
+					display: flex;
+					align-items: center;
+					flex-wrap: nowrap;
+					box-sizing: border-box;
+					.tab-scroll_item{
+						line-height: 60rpx;
+						margin-right: 35rpx;
+						flex-shrink: 0;
+						padding-bottom:10px;
+						display: flex;
+						justify-content: center;
+						font-size: 16px;
+						padding-top: 10px;
+						color: white;
+						// height: 120rpx;
+					}
+				}
+			}
+			.line{
+				height: 30rpx;
+				background-color: $uni-color-selected;
 			}
 		}
 		.swiper-content{
@@ -230,8 +246,9 @@
 	}
 	.active_white {
 		position: relative;
-		color:  $uni-text-color;
+		color:  white;
 		font-weight: 600;
+		background-color: $uni-color-selected;
 	}
 	.active_white::after {
 		content: "";

@@ -1,4 +1,4 @@
-const BASE_URL='http://localhost:8082'
+const BASE_URL='http://localhost:8000'//'http://39.108.79.162:8000'
 export const myRequest=(options)=>{
 	return new Promise((resolve,reject)=>{
 		uni.request({
@@ -6,7 +6,8 @@ export const myRequest=(options)=>{
 			method:options.method||'GET',
 			data:options.data||{},
 			success: (res) => {
-				if(res.data.stauts!==0){
+				console.log(res)
+				if(res.data.status!==0){
 					return uni.showToast({
 						title:'获取数据失败'
 					})

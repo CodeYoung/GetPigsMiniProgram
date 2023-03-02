@@ -21,7 +21,7 @@
 <script>
 </script>
 
-<style>
+<style lang="scss">
 	.box1{
 		background:#C0C0C0 ;
 		height: 623px;
@@ -41,7 +41,13 @@
         margin-left: 220px;
 		margin-right: 3px;
 		height: 25px;
+		border: none;
 		
+		}
+		.BtnX::after{
+			
+				border: none;
+			
 		}
 	
 	.cptorder{

@@ -1,5 +1,6 @@
 <template>
 	<view class="topContent">
+		<!-- 头部 -->
 		<view class="todayPrice">今日猪价 {{today}}已更新</view>
 		<view class="boxs">
 			<view class="box" style="">
@@ -37,12 +38,35 @@
 			<image src="../../static/icon/voice_1.png" style="height: 30rpx;width: 30rpx;margin-right: 20rpx;"></image>
 			<view>用户xx土杂猪出售成功 订单已完成...</view>
 		</view>
-		<tabControl :category='category' @ChangeTab='ChangeTab'></tabControl>
+		<!-- 内容显示区域 -->
+		<scroll-view>
+			<tabControl :category='category' @ChangeTab='ChangeTab'></tabControl>
+			<swiper indicator-dots circular class="swiperImg">
+				<swiper-item>1</swiper-item>
+				<swiper-item>2</swiper-item>
+				<swiper-item>3</swiper-item>
+			</swiper>
+			<view class="goods_list">
+				<scroll-view class="goods_item" v-for="item in goodsList" :key="item.Id">
+					<goodsItemControl  :goods='item'></goodsItemControl>
+				</scroll-view> 
+					
+			</view>
+		</scroll-view>
+		
+		<view>
+			<button class="BtnSell" size="mini">
+				<!-- <image class="BtnSellImg" src="../../static/other/组 264.png"></image> -->
+				<!-- <view>我要出售</view> -->
+				</button>
+		</view>
+		
 	</view>
 </template>
 
 <script>
 	import tabControl from "../../components/tabControl.vue"
+	import goodsItemControl from "../../components/goodsItemControl.vue"
 	export default {
 		watch: {
 			// swiper与上面选项卡联动
@@ -87,6 +111,43 @@
 					// 	name: '选项卡六',
 					// },
 				],
+				goodsList:[],
+				// goodsList:[
+				// 	{
+				// 		Id:1,
+				// 		UserInfo:{
+				// 			HeaderImg:'../../static/other/蒙版组 1.png',
+				// 			UserName:'天猪工厂',
+				// 			ToSellData:"最新"
+				// 		},
+				// 		TypeName:'育肥猪',
+				// 		SellingCount:'12头',
+				// 		AvgWeight:'260斤',
+				// 		Price:'10元/斤',
+				// 		Memo:'大量成猪',
+				// 		Images:["../../static/other/蒙版组 2.png"
+				// 			,"../../static/other/蒙版组 3.png"
+				// 			],
+				// 		ScanCount:'372人浏览'
+				// 	},
+				// 	{
+				// 		Id:2,
+				// 		UserInfo:{
+				// 			HeaderImg:'../../static/other/蒙版组 1.png',
+				// 			UserName:'天猪工厂',
+				// 			ToSellData:"最新"
+				// 		},
+				// 		TypeName:'育肥猪',
+				// 		SellingCount:'12头',
+				// 		AvgWeight:'260斤',
+				// 		Price:'10元/斤',
+				// 		Memo:'大量成猪',
+				// 		Images:["../../static/other/蒙版组 2.png"
+				// 			,"../../static/other/蒙版组 3.png"
+				// 			],
+				// 		ScanCount:'372人浏览'
+				// 	}
+				// ],
 				contentScrollW: 0, // 导航区宽度
 				scrollLeft: 0, // 横向滚动条位置
 				fullHeight: "",
@@ -146,18 +207,31 @@
 				//_this.$data.today=yy + "-" + mm + "-" + dd;
 				_this.today = yy + "-" + mm + "-" + dd;
 			},
+			 
 			ChangeTab(currentTabindex){
-				// console.log('当前选择页'+currentTabindex);
+				//getGoodsList(currentTabindex)
+				 console.log('当前选择页'+currentTabindex);
+				 this.getGoodsList(currentTabindex);
+			},
+			async getGoodsList(currentTabindex) {
+			 const res= await this.$myRequest({
+					url:'/Api/pigApi/GetGoodsList',
+					method:'POST',
+					data:{"goodsType":currentTabindex}
+				})
+				this.goodsList=res.data.data
+				console.log(res)
 			}
 
 		},
 		components:{
-			tabControl
+			tabControl,
+			goodsItemControl
 		}
 	}
 </script>
 
-<style>
+<style lang="scss">
 	/* page{
         height: 100%;
         display: flex;
@@ -206,6 +280,52 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+	}
+	.swiperImg{
+		width: 750rpx;
+	}
+	.goods_list
+	{
+		background-color: $uni-bg-color-grey;
+		.goods_item{
+			background-color: $uni-bg-color;
+			margin-top: 10rpx;
+			padding-bottom: 30rpx;
+		}
+	}
+	.BtnSell
+	{
+		color: $uni-text-color-inverse;
+		width: 362px;
+		background-color:transparent;
+		// box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+		// border:0px;
+		position: fixed;
+		bottom: 10px;
+		// top:320px;
+		// left: 5%;
+		display: flex;
+		border-radius: 30px;
+		height: 70px;
+		text-align: center;
+		align-items: center;
+		// border-color: transparent;
+		border: none;
+		background-image: url('../../static/other/组 264.png');
+		// background-size: 100% 100%;
+		// background-repeat: no-repeat;
+		// .BtnSellImg{
+			
+		// 	height: 50px;
+		// 	width: 350px;
+		// 	// padding-top: 30rpx;
+		// }
+		// background-image:url('../../static/other/组 273.png') ;
+	}
+	.BtnSell::after
+	{
+		background-color:transparent;
+		border: none;
 	}
 	
 	
