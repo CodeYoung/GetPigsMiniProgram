@@ -214,7 +214,7 @@
 		    "path" : "pages/OrderTransactionCompleted/OrderTransactionCompleted",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "我的",
+		        "navigationBarTitleText": "订单交易完成",
 		        "enablePullDownRefresh": false,
 				"navigationBarBackgroundColor": "#f8f8f8"
 		    }
@@ -226,7 +226,7 @@
             "path" : "pages/OrderCompletion/OrderCompletion",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "订单完成",
                 "enablePullDownRefresh": false
             }
             
