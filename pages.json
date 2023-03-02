@@ -9,14 +9,220 @@
 			}
 		},
 		{
-			"path": "pages/animalDoctor/animalDoctor",
-			"style": {}
+		    "path" : "pages/demo/demo",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
 		},
 		{
-			"path": "pages/my/my",
-			"style": {}
+		    "path" : "pages/CustomerService/CustomerService",
+		    "style" :                                                                                   
+		    {
+		        "enablePullDownRefresh": false,
+				"navigationBarTitleText": "联系客服",
+				"navigationBarTextStyle": "white"
+		    }
+		    
+		},
+		
+		{
+			"path": "pages/AnimalDoctor/AnimalDoctor",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "兽医",
+				"navigationBarBackgroundColor": "white"
+			}
+		},
+		{
+			"path": "pages/MyOrder/MyOrder",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "我的订单",
+				"navigationBarBackgroundColor": "white"
+			}
 		}
-	],
+	    
+        
+        ,{
+            "path" : "pages/GoodsDetail/GoodsDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "产品详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+            }
+            
+        }
+        ,{
+            "path" : "pages/OrderDetails/OrderDetails",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+            }
+            
+        }
+        ,{
+            "path" : "pages/OrderConfirm/OrderConfirm",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单确认",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+            }
+            
+        }
+        ,{
+            "path" : "pages/OrderTaking/OrderTaking",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "老板昵称",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"type": "none",
+								"background":"#fff",
+								// "color": "white",
+								"text": "",
+								"float": "left",
+								"image":""
+							}
+						]
+					}
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/OrderExpressDetailInfo/OrderExpressDetailInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+            }
+            
+        },{
+            "path" : "pages/AuthorizeLogin/AuthorizeLogin",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "授权登录",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+            }
+            
+        },{
+            "path" : "pages/Boss/Boss",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "申请成为老板",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+            }
+            
+        },{
+            "path" : "pages/CompleteOrder/CompleteOrder",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+            }
+            
+        }
+		,{
+		    "path" : "pages/CreateNewAddress/CreateNewAddress",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "新建地址",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+		    }
+		    
+		},{
+		    "path" : "pages/MyPosting/MyPosting",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的发布",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+		    }
+		    
+		},{
+		    "path" : "pages/PaymentSuccessful/PaymentSuccessful",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "支付成功",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+		    }
+		    
+		},{
+		    "path" : "pages/PublishingSucceeded/PublishingSucceeded",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "发布成功",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+		    }
+		    
+		},{
+		    "path" : "pages/SuccessfulApplication/SuccessfulApplication",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "申请成功",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+		    }
+		    
+		},{
+		    "path" : "pages/Ticket/Ticket",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "抢单大厅",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+		    }
+		    
+		},{
+		    "path" : "pages/YangZhi/YangZhi",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "养殖交流群",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "white"
+		    }
+		    
+		},{
+		    "path" : "pages/My/My",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#f8f8f8"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/OrderTransactionCompleted/OrderTransactionCompleted",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#f8f8f8"
+		    }
+		    
+		}
+		
+		
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "收猪啦综合服务平台",
@@ -25,7 +231,7 @@
 	},
 	"uniIdRouter": {},
 	"tabBar": {
-		"selectedColor": "#FF8C00",
+		"selectedColor": "$uni-color-selected",
 		"color": "#ccc",
 		"list": [
 			{
@@ -38,13 +244,13 @@
 				"text": "兽医",
 				"iconPath": "static/icon/medicine_gray.png",
 				"selectedIconPath": "static/icon/medicine.png",
-				"pagePath": "pages/animalDoctor/animalDoctor"
+				"pagePath": "pages/AnimalDoctor/AnimalDoctor"
 			},
 			{
 				"text": "我的",
 				"iconPath": "static/icon/person_gray.png",
 				"selectedIconPath": "static/icon/person.png",
-				"pagePath": "pages/my/my"
+				"pagePath": "pages/My/My"
 			}
 		]
 	}
